@@ -48,4 +48,16 @@ public class DynamicStack implements IStack {
         }
         return result;
     }
+
+    public void invest() {
+        DynamicQueue queue = new DynamicQueue();
+        while (!this.isEmpty()) {
+            queue.add(this.getTop());
+            this.remove();
+        }
+        while (!queue.isEmpty()) {
+            this.add(queue.getFirst());
+            queue.remove();
+        }
+    }
 }

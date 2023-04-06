@@ -33,10 +33,13 @@ public class Main {
         queue.add(stack2);
         queue.add(stack3);
         queue.print1();
+        QueueOfStacks copy = queue.copy();
+        copy.print1();
+        sum(queue, copy).print1();
 //        System.out.println(getTraza(queue));
 //        System.out.println(getTraza(queue));
-        getTransposed(queue);
-        queue.print1();
+        //getTransposed(queue);
+        //queue.print1();
 
     }
 
@@ -90,5 +93,26 @@ public class Main {
             auxQueue.remove();
             matrix.add(stack);
         }
+    }
+
+    public static QueueOfStacks sum(QueueOfStacks queue0, QueueOfStacks queue1) {
+        QueueOfStacks result = new QueueOfStacks();
+        while(!queue0.isEmpty()) {
+            DynamicStack resultStack = new DynamicStack();
+            DynamicStack auxStack0 = queue0.getFirst();
+            DynamicStack auxStack1 = queue1.getFirst();
+            auxStack0.invest();
+            auxStack1.invest();
+            queue0.remove();
+            queue1.remove();
+            while (!auxStack0.isEmpty()) {
+                int aux = auxStack1.getTop() + auxStack0.getTop();
+                auxStack0.remove();
+                auxStack1.remove();
+                resultStack.add(aux);
+            }
+            result.add(resultStack);
+        }
+        return result;
     }
 }
