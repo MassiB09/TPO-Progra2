@@ -1,19 +1,18 @@
-package org.example.classes;
+package org.example.genericClasses;
 
-import org.example.Interfaces.IQueue;
+import org.example.Interfaces.IGenericQueue;
+import org.example.classes.Node;
 
-public class DynamicQueue implements IQueue {
-
-    private Node first;
-
+public class GenericQueue<T> implements IGenericQueue {
+    private GenericNode<T> first;
     @Override
-    public void add(int a) {
-        Node node = new Node(a, null);
+    public void add(Object a) {
+        GenericNode<T> node = new GenericNode<T>((T) a, null);
         if(this.first == null) {
             this.first = node;
             return;
         }
-        Node candidate = this.first;
+        GenericNode<T> candidate = this.first;
         while(candidate.getNext() != null) {
             candidate = candidate.getNext();
         }
@@ -35,10 +34,10 @@ public class DynamicQueue implements IQueue {
     }
 
     @Override
-    public int getFirst() {
+    public T getFirst() {
         if(this.first == null) {
             System.out.println("No se puede obtener el primero una cola vacia");
-            return -1;
+            return null;
         }
         return this.first.getValue();
     }

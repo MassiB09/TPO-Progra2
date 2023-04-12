@@ -1,4 +1,6 @@
-package org.example.classes;
+package org.example.Interfaces;
+
+import org.example.classes.DynamicStack;
 
 import java.util.Stack;
 

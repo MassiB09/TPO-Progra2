@@ -1,5 +1,7 @@
 package org.example.classes;
 
+import org.example.Interfaces.IStack;
+
 public class DynamicStack implements IStack {
 
     private Node first;

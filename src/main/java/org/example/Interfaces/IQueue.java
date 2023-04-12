@@ -1,4 +1,4 @@
-package org.example.classes;
+package org.example.Interfaces;
 
 /**
  * Precondicion: para usar cualquier de estos metodos la estructura debe estar inicializada.

@@ -1,11 +1,16 @@
 package org.example;
 
 import org.example.classes.DynamicQueue;
+import org.example.genericClasses.GenericNode;
 import org.example.classes.QueueOfStacks;
 import org.example.classes.DynamicStack;
+import org.example.genericClasses.GenericQueue;
+import org.example.genericClasses.GenericStack;
 
 public class Main {
     public static void main(String[] args) {
+//        GenericNode<String> generic = new GenericNode<>("Hola", null);
+//        System.out.println(generic.getValue());
         DynamicStack stack0 = new DynamicStack();
         stack0.add(4);
         stack0.add(3);
@@ -32,15 +37,25 @@ public class Main {
         queue.add(stack1);
         queue.add(stack2);
         queue.add(stack3);
-        queue.print1();
-        QueueOfStacks copy = queue.copy();
-        copy.print1();
-        sum(queue, copy).print1();
+//        queue.print1();
+//        QueueOfStacks copy = queue.copy();
+//        copy.print1();
+//        sum(queue, copy).print1(); //
 //        System.out.println(getTraza(queue));
 //        System.out.println(getTraza(queue));
         //getTransposed(queue);
         //queue.print1();
-
+        GenericStack stack = new GenericStack();
+        stack.push(1);
+        stack.push("hola");
+        stack.push(2);
+        stack.push("chau");
+        stack.push(queue);
+        inverse(stack);
+        while (!stack.isEmpty()) {
+            System.out.println(stack.getTop());
+            stack.pop();
+        }
     }
 
     public static int getTraza(QueueOfStacks queue) {
@@ -114,5 +129,17 @@ public class Main {
             result.add(resultStack);
         }
         return result;
+    }
+
+    public static void inverse(GenericStack stack) {
+        GenericQueue aux = new GenericQueue();
+        while (!stack.isEmpty()) {
+            aux.add(stack.getTop());
+            stack.pop();
+        }
+        while (!aux.isEmpty()) {
+            stack.push(aux.getFirst());
+            aux.remove();
+        }
     }
 }

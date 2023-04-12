@@ -1,5 +1,7 @@
 package org.example.classes;
 
+import org.example.Interfaces.IQueueOfStacks;
+
 public class QueueOfStacks implements IQueueOfStacks {
 
     private NodeStack first;
