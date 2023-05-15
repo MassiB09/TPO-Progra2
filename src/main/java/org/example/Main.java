@@ -6,6 +6,9 @@ import org.example.classes.QueueOfStacks;
 import org.example.classes.DynamicStack;
 import org.example.genericClasses.GenericQueue;
 import org.example.genericClasses.GenericStack;
+import org.example.genericClasses.Set;
+
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
@@ -45,17 +48,37 @@ public class Main {
 //        System.out.println(getTraza(queue));
         //getTransposed(queue);
         //queue.print1();
-        GenericStack stack = new GenericStack();
-        stack.push(1);
+        GenericStack<String> stack = new GenericStack<String>();
+        //stack.push(1);
         stack.push("hola");
-        stack.push(2);
+        //stack.push(2);
         stack.push("chau");
-        stack.push(queue);
-        inverse(stack);
-        while (!stack.isEmpty()) {
-            System.out.println(stack.getTop());
-            stack.pop();
+        //stack.push(queue);
+//        GenericStack<String> copy = stack.copy();
+//        inverse(copy);
+//        while (!copy.isEmpty()) {
+//            System.out.println(copy.getTop());
+//            copy.pop();
+//        }
+
+        Set<String> set = new Set<String>();
+        set.add("Bauti");
+        set.add("Fran");
+        set.add("Milito");
+        set.add("Massi");
+        Set<String> copySet = copy(set);
+        while (!set.isEmpty()) {
+            String aux = set.choose();
+            set.remove(aux);
+            System.out.println(aux);
         }
+        while (!copySet.isEmpty()) {
+            String aux = copySet.choose();
+            copySet.remove(aux);
+            System.out.println(aux);
+        }
+        System.out.println(set.isEmpty());
+        System.out.println(copySet.isEmpty());
     }
 
     public static int getTraza(QueueOfStacks queue) {
@@ -131,8 +154,8 @@ public class Main {
         return result;
     }
 
-    public static void inverse(GenericStack stack) {
-        GenericQueue aux = new GenericQueue();
+    public static <T> void inverse(GenericStack<T> stack) {
+        GenericQueue<T> aux = new GenericQueue<T>();
         while (!stack.isEmpty()) {
             aux.add(stack.getTop());
             stack.pop();
@@ -141,5 +164,22 @@ public class Main {
             stack.push(aux.getFirst());
             aux.remove();
         }
+    }
+
+    public static <T> Set<T> copy(Set<T> set) {
+        GenericQueue<T> queue = new GenericQueue<T>();
+        Set<T> copy = new Set<T>();
+        while (!set.isEmpty()) {
+            T aux = set.choose();
+            queue.add(aux);
+            set.remove(aux);
+        }
+        while (!queue.isEmpty()) {
+            T aux = queue.getFirst();
+            set.add(aux);
+            copy.add(aux);
+            queue.remove();
+        }
+        return copy;
     }
 }

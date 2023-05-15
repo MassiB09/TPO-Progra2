@@ -2,12 +2,12 @@ package org.example.genericClasses;
 
 import org.example.Interfaces.IGenericStack;
 
-public class GenericStack<T> implements IGenericStack {
+public class GenericStack<T> implements IGenericStack<T> {
     private GenericNode<T> top;
 
-
-    public void push(Object a) { //No entiendo por que no se usa T
-        this.top = new GenericNode<T>((T) a, this.top); //No entiendo este warning xd
+    @Override
+    public void push(T a) {
+        this.top = new GenericNode<T>(a, this.top);
     }
 
     public void pop() {

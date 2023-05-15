@@ -1,5 +1,5 @@
 package org.example.classes;
-// hola
+
 public class Node {
 
     private int value;

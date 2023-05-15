@@ -1,13 +1,12 @@
 package org.example.genericClasses;
 
 import org.example.Interfaces.IGenericQueue;
-import org.example.classes.Node;
 
-public class GenericQueue<T> implements IGenericQueue {
+public class GenericQueue<T> implements IGenericQueue<T> {
     private GenericNode<T> first;
     @Override
-    public void add(Object a) {
-        GenericNode<T> node = new GenericNode<T>((T) a, null);
+    public void add(T a) {
+        GenericNode<T> node = new GenericNode<T>(a, null);
         if(this.first == null) {
             this.first = node;
             return;

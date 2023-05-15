@@ -62,7 +62,7 @@ public class QueueOfStacks implements IQueueOfStacks {
 //        }
 //    }
 
-    public void print1() {
+    public void print() {
         QueueOfStacks auxQueue = this.copy();
         int count = this.length() * this.length();
         for (int i = 0; i < count; i++) {
