@@ -42,4 +42,15 @@ public class DynamicQueue implements IQueue {
         }
         return this.first.getValue();
     }
+
+    public void invest() { //Arreglar ejercicio 1 en el main (creo que existe una funcion invertir cola en el main)
+        if (this.isEmpty()) {
+            return;
+        }
+
+        int value = this.getFirst();
+        this.remove();
+        this.invest();
+        this.add(value);
+    }
 }

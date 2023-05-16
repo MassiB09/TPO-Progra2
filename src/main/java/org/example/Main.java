@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.classes.DynamicQueue;
+import org.example.classes.QueueOfQueue;
 import org.example.genericClasses.GenericNode;
 import org.example.classes.QueueOfStacks;
 import org.example.classes.DynamicStack;
@@ -35,11 +36,11 @@ public class Main {
         stack3.add(14);
         stack3.add(13);
         //System.out.println(stack.getTop());
-        QueueOfStacks queue = new QueueOfStacks();
-        queue.add(stack0);
-        queue.add(stack1);
-        queue.add(stack2);
-        queue.add(stack3);
+//        QueueOfStacks queue = new QueueOfStacks();
+//        queue.add(stack0);
+//        queue.add(stack1);
+//        queue.add(stack2);
+//        queue.add(stack3);
 //        queue.print1();
 //        QueueOfStacks copy = queue.copy();
 //        copy.print1();
@@ -61,24 +62,60 @@ public class Main {
 //            copy.pop();
 //        }
 
-        Set<String> set = new Set<String>();
-        set.add("Bauti");
-        set.add("Fran");
-        set.add("Milito");
-        set.add("Massi");
-        Set<String> copySet = copy(set);
-        while (!set.isEmpty()) {
-            String aux = set.choose();
-            set.remove(aux);
-            System.out.println(aux);
+//        Set<String> set = new Set<String>();
+//        set.add("Bauti");
+//        set.add("Fran");
+//        set.add("Milito");
+//        set.add("Massi");
+//        Set<String> copySet = copy(set);
+//        while (!set.isEmpty()) {
+//            String aux = set.choose();
+//            set.remove(aux);
+//            System.out.println(aux);
+//        }
+//        while (!copySet.isEmpty()) {
+//            String aux = copySet.choose();
+//            copySet.remove(aux);
+//            System.out.println(aux);
+//        }
+//        System.out.println(set.isEmpty());
+//        System.out.println(copySet.isEmpty());
+        QueueOfQueue queue = new QueueOfQueue();
+        DynamicQueue queue1 = new DynamicQueue();
+        queue1.add(1);
+        queue1.add(2);
+        queue1.add(3);
+        DynamicQueue queue2 = new DynamicQueue();
+        queue2.add(4);
+        queue2.add(5);
+        queue2.add(6);
+        DynamicQueue queue3 = new DynamicQueue();
+        queue3.add(7);
+        queue3.add(8);
+        queue3.add(9);
+        DynamicQueue queue4 = new DynamicQueue();
+        queue4.add(10);
+        queue4.add(11);
+        queue4.add(12);
+        DynamicQueue queue5 = new DynamicQueue();
+        queue5.add(13);
+        queue5.add(14);
+        queue5.add(15);
+        queue.add(queue1);
+        queue.add(queue2);
+        queue.add(queue3);
+        QueueOfQueue queueQ = new QueueOfQueue();
+        queueQ.add(queue4);
+        queueQ.add(queue5);
+        queue.concatenate(queueQ);
+        while (!queueQ.isEmpty()) {
+            DynamicQueue queue6 = queueQ.getFirst();
+            while (!queue6.isEmpty()) {
+                System.out.println(queue6.getFirst());
+                queue6.remove();
+            }
+            queueQ.remove();
         }
-        while (!copySet.isEmpty()) {
-            String aux = copySet.choose();
-            copySet.remove(aux);
-            System.out.println(aux);
-        }
-        System.out.println(set.isEmpty());
-        System.out.println(copySet.isEmpty());
     }
 
     public static int getTraza(QueueOfStacks queue) {

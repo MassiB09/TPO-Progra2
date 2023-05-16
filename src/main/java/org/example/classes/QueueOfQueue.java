@@ -43,7 +43,7 @@ public class QueueOfQueue implements IQueueOfQueue {
     }
 
     @Override
-    public void concatenate(QueueOfQueue queue) { //Probar
+    public void concatenate(QueueOfQueue queue) { //Probar, diria que funca xd
         QueueOfQueue auxQ = new QueueOfQueue();
         while (!queue.isEmpty()) {
             DynamicQueue aux = queue.getFirst();
@@ -54,6 +54,32 @@ public class QueueOfQueue implements IQueueOfQueue {
             DynamicQueue aux = auxQ.getFirst();
             queue.add(aux);
             this.add(aux);
+            auxQ.remove();
         }
+    }
+
+    public DynamicQueue flat() { //Funca
+        DynamicQueue result = new DynamicQueue();
+        while (!this.isEmpty()) {
+            DynamicQueue aux = this.getFirst();
+            while (!aux.isEmpty()) {
+                result.add(aux.getFirst());
+                aux.remove();
+            }
+            this.remove();
+        }
+        return result;
+    }
+
+    public void reverseWithDepth() { //Funca
+        if (this.isEmpty()) {
+            return;
+        }
+
+        DynamicQueue queue = this.getFirst();
+        queue.invest();
+        this.remove();
+        this.reverseWithDepth();
+        this.add(queue);
     }
 }
