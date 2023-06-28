@@ -4,16 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39db236d-42e6-40a4-8bb4-7a3f711e94db" name="Changes" comment="Ejercicio 2 terminado, inicio de ejercicio 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/IBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/BinaryTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/classes/BinaryTreeTest.java" afterDir="false" />
+    <list default="true" id="39db236d-42e6-40a4-8bb4-7a3f711e94db" name="Changes" comment="Ejercicio 3 testeado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/ISet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/IStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ILinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ISet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ISetDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Axis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/LimitedStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Montecarlo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/NodeDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/SetDuplicates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/SuperSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/DynamicQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/DynamicQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/QueueOfQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/QueueOfQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/classes/QueueOfStacksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/classes/QueueOfStacksTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/genericClasses/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/genericClasses/Set.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -73,12 +85,26 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maxbi\IdeaProjects\TPO\src\main\java\org\example" />
       <recent name="C:\Users\maxbi\IdeaProjects\TPO\src\main\java\org\example\classes" />
       <recent name="C:\Users\maxbi\IdeaProjects\TPO\src\main\java\org\example\Interfaces" />
       <recent name="C:\Users\maxbi\IdeaProjects\TPO\src\main\java\org\example\genericClasses" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BinaryTreeTest.isEmpty">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="TPO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinaryTreeTest.addLeft (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TPO" />
       <extension name="coverage">
@@ -127,22 +153,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryTreeTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TPO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.classes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.classes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.classes.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="getValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BinaryTreeTest.isEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TPO" />
       <extension name="coverage">
@@ -161,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.BinaryTreeTest.addLeft" />
         <item itemvalue="JUnit.BinaryTreeTest.isEmpty" />
         <item itemvalue="JUnit.BinaryTreeTest.addRight" />
         <item itemvalue="JUnit.BinaryTreeTest.addLeft (1)" />
-        <item itemvalue="JUnit.BinaryTreeTest.addLeft" />
-        <item itemvalue="JUnit.BinaryTreeTest.getValue" />
       </list>
     </recent_temporary>
   </component>
@@ -206,14 +216,38 @@
       <option name="project" value="LOCAL" />
       <updated>1684192137780</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ejercicio 3 testeado">
+      <created>1684267120104</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684267120104</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
     <MESSAGE value="Punto 1 casi terminado" />
     <MESSAGE value="Prueba de commit" />
     <MESSAGE value="Ejercicio 2 terminado, inicio de ejercicio 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 2 terminado, inicio de ejercicio 3" />
+    <MESSAGE value="Ejercicio 3 testeado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 3 testeado" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TPO$BinaryTreeTest_isEmpty.ic" NAME="BinaryTreeTest.isEmpty Coverage Results" MODIFIED="1684267216475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.classes.*</FILTER>
+    </SUITE>
   </component>
 </project>

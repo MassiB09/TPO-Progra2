@@ -1,17 +1,18 @@
-package org.example.genericClasses;
+package org.example.classes;
 
-import org.example.Interfaces.IGenericSet;
+import org.example.Interfaces.ISet;
+
 import java.util.Random;
 
-public class Set<T> implements IGenericSet<T> {
+public class Set implements ISet {
 
-    private GenericNode<T> first;
+    private Node first;
     private int count;
 
     @Override
-    public void add(T a) {
+    public void add(int a) {
         if (this.first == null) {
-            this.first = new GenericNode<T>(a, null);
+            this.first = new Node(a, null);
             this.count++;
             return;
         }
@@ -20,19 +21,19 @@ public class Set<T> implements IGenericSet<T> {
             return;
         }
 
-        GenericNode<T> candidate = this.first;
+        Node candidate = this.first;
         while (candidate.getNext() != null) {
             candidate = candidate.getNext();
             if (candidate.getValue() == a) {
                 return;
             }
         }
-        candidate.setNext(new GenericNode<T>(a, null));
+        candidate.setNext(new Node(a, null));
         this.count++;
     }
 
     @Override
-    public void remove(T a) {
+    public void remove(int a) {
         if (this.first == null || (this.first.getNext() == null && this.first.getValue() != a)) {
             return;
         }
@@ -51,8 +52,8 @@ public class Set<T> implements IGenericSet<T> {
             return;
         }
 
-        GenericNode<T> backup = this.first;
-        GenericNode<T> candidate = this.first.getNext();
+        Node backup = this.first;
+        Node candidate = this.first.getNext();
 
         while (candidate != null) {
             if (candidate.getValue() == a) {
@@ -71,16 +72,50 @@ public class Set<T> implements IGenericSet<T> {
     }
 
     @Override
-    public T choose() {
+    public int choose() {
         if (this.count == 0) {
             System.out.println("No se puede elegir un elemento del conjunto vacio");
-            return null;
+            return -1;
         }
         int randomIndex = (new Random()).nextInt(this.count);
-        GenericNode<T> candidate = this.first;
+        Node candidate = this.first;
         for (int i = 1; i <= randomIndex; i++) {
             candidate = candidate.getNext();
         }
         return candidate.getValue();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Set set = (Set) o;
+        if (count != set.count) {
+            return false;
+        }
+
+        Node aux = this.first;
+        while (aux != null) {
+            if (!exists(aux.getValue(), set.first)) {
+                return false;
+            }
+            aux = aux.getNext();
+        }
+
+        return true;
+    }
+
+    private boolean exists(int value, Node node) {
+        if (node == null) {
+            return false;
+        }
+        if (value == node.getValue()) {
+            return true;
+        }
+        return exists(value, node.getNext());
+    }
+
+    public boolean contains (int value){
+        return exists(value, this.first);
     }
 }
