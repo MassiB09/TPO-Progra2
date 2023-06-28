@@ -8,10 +8,8 @@ public class TwoWayNode {
     private TwoWayNode next;
     private TwoWayNode previous;
 
-    public TwoWayNode(int value, TwoWayNode next, TwoWayNode previous) {
+    public TwoWayNode(int value) {
         this.value = value;
-        this.next = next;
-        this.previous = previous;
     }
 
     public int getValue() {

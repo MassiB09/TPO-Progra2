@@ -10,36 +10,14 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-//        SuperSet set = new SuperSet();
-//        set.add(1);
-//        set.add(1);
-//        set.add(2);
-//        set.add(3);
-//        set.add(4);
-//        set.add(5);
-//        org.example.classes.Set aux = new org.example.classes.Set();
-//        aux.add(1);
-//        aux.add(2);
-//        aux = set.Complemento(aux);
-//        while(!aux.isEmpty()) {
-//            int var = aux.choose();
-//            System.out.println(var);
-//            aux.remove(var);
-//        }
-
-        SetDuplicates set1 = new SetDuplicates();
-        set1.add(1);
-        set1.add(1);
-        set1.add(1);
-        set1.add(1);
-        set1.add(2);
-        set1.add(3);
-        set1.add(2);
-        System.out.println(set1.chooseTimes(2));
-        while(!set1.isEmpty()) {
-            int var = set1.choose();
-            System.out.println(var);
-            set1.remove(var);
+        TwoWayQueue queue = new TwoWayQueue();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        while(!queue.isEmpty()) {
+            System.out.println(queue.getFirst());
+            queue.remove();
         }
     }
 

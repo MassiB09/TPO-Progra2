@@ -4,28 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39db236d-42e6-40a4-8bb4-7a3f711e94db" name="Changes" comment="Ejercicio 3 testeado">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/ISet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/IStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Set.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Ejercicio4/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ILinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ISet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Interfaces/ISetDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Axis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/LimitedStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Montecarlo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/NodeDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/Set.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/SetDuplicates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/SuperSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="39db236d-42e6-40a4-8bb4-7a3f711e94db" name="Changes" comment="...">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/genericClasses/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/genericClasses/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/classes/TwoWayQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684267120104</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="...">
+      <created>1687959020830</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687959020830</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +232,8 @@
     <MESSAGE value="Prueba de commit" />
     <MESSAGE value="Ejercicio 2 terminado, inicio de ejercicio 3" />
     <MESSAGE value="Ejercicio 3 testeado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 3 testeado" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TPO$BinaryTreeTest_isEmpty.ic" NAME="BinaryTreeTest.isEmpty Coverage Results" MODIFIED="1684267216475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

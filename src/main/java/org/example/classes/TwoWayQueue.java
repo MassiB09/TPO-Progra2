@@ -6,29 +6,41 @@ public class TwoWayQueue {
     private TwoWayNode last;
 
 
+    public TwoWayQueue() {
+        this.first = null;
+        this.last = null;
+    }
+
     public void add(int a) {
-        TwoWayNode node = new TwoWayNode(a, null, null);
-        if (this.first == null && this.isEmpty()) {
-            this.first = node;
-            this.last = node;
+        TwoWayNode newNode = new TwoWayNode(a);
+        if (this.first == null) {
+            newNode.setNext(newNode);
+            newNode.setPrevious(newNode);
+            first = newNode;
+            last = newNode;
         } else {
-            node.setPrevious(this.last);
-            node.getPrevious().setNext(node);
-            this.last = node;
+            newNode.setNext(first);
+            newNode.setPrevious(last);
+            last.setNext(newNode);
+            first.setPrevious(newNode);
+            last = newNode;
         }
     }
 
     public void remove() {
-        if (this.first == null) {
+        if (isEmpty()) {
             System.out.println("No se puede desacolar una cola vacía");
             return;
         }
-        this.first = this.first.getNext();
-        //this.last = this.first.getNext();
-        if (this.first != null) {
-            this.first.setPrevious(null);
+
+        if (first == last) {
+            first = null;
+            last = null;
         } else {
-            this.last = null; // La cola está vacía después de desacolar el único elemento
+            TwoWayNode newFirst = first.getNext();
+            newFirst.setPrevious(last);
+            last.setNext(newFirst);
+            first = newFirst;
         }
     }
 
