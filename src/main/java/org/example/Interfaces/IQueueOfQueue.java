@@ -12,5 +12,9 @@ public interface IQueueOfQueue {
 
     DynamicQueue getFirst();
 
-    void concatenate(QueueOfQueue queue);
+    void concatenate();
+
+    DynamicQueue flat();
+
+    void reverseWithDepth();
 }
