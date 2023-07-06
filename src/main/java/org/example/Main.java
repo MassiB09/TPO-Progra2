@@ -1,13 +1,12 @@
 package org.example;
 
+import org.example.Ejercicio4.Queue;
 import org.example.Ejercicio4.Stack;
 import org.example.classes.*;
 import org.example.genericClasses.GenericNode;
 import org.example.genericClasses.GenericQueue;
 import org.example.genericClasses.GenericStack;
 import org.example.genericClasses.Set;
-
-import java.util.Queue;
 
 import static org.example.classes.StackAlgorithms.*;
 
@@ -75,16 +74,21 @@ public class Main {
 //            System.out.println("]");
 //            queueQ.remove();
 //        }
-        DynamicStack stack = new DynamicStack();
-        stack.add(3);
-        stack.add(2);
-        stack.add(4);
-        stack.add(1);
-        stack.add(1);
-        stack.add(2);
-
-        stack = tidy(stack);
-        print(stack);
+//        DynamicStack stack = new DynamicStack();
+//        stack.add(3);
+//        stack.add(2);
+//        stack.add(4);
+//        stack.add(1);
+//        stack.add(1);
+//        stack.add(2);
+//
+//        stack = tidy(stack);
+//        print(stack);
+        Queue<Integer> queue = new Queue<>(1, 2, 3, 4, 5);
+        while (!queue.isEmpty()) {
+            System.out.println(queue.getFirst());
+            queue.remove();
+        }
     }
 
     public static int getTraza(QueueOfStacks queue) {
