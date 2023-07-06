@@ -149,8 +149,8 @@ public class Main {
             DynamicStack resultStack = new DynamicStack();
             DynamicStack auxStack0 = queue0.getFirst();
             DynamicStack auxStack1 = queue1.getFirst();
-//            auxStack0.invest();
-//            auxStack1.invest();
+            auxStack0.invest();
+            auxStack1.invest();
             queue0.remove();
             queue1.remove();
             while (!auxStack0.isEmpty()) {
